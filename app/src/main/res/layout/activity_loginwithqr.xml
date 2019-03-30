@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/white"
+    android:padding="20dp"
     tools:context=".LogInWithQRActivity">
 
-    <com.camerakit.CameraKitView
-        android:id="@+id/camera"
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:keepScreenOn="true"
-        app:camera_flash="auto"
-        app:camera_facing="back"
-        app:camera_focus="continuous"
-        app:camera_permissions="camera" />
-
-    <android.support.v7.widget.AppCompatButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/photoButton"
-        android:backgroundTint="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-         />
+        android:background="@android:color/holo_orange_dark"
+        android:onClick="scan"
+        android:text="Scan"
+        android:textColor="@android:color/white" />
 
 
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
