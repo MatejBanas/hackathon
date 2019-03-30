@@ -1,12 +1,12 @@
 package com.hcktn16.medicalqr;
 
-<<<<<<< HEAD
 import android.arch.persistence.room.Room;
-=======
+
 import android.content.Context;
->>>>>>> 861a6b6a5818d298bf197c85dd68aec0282872c5
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.hcktn16.medicalqr.dao.PatientDao;
 import com.hcktn16.medicalqr.db.PatientDatabase;
@@ -33,10 +33,11 @@ public class MainActivity extends AppCompatActivity {
         patient.setLastName("Banas");
 
         patientDao.insert(patient);
-        // Show on phone
 
+        // Debug
         List<Patient> patientList = patientDao.getPatients();
 
+        Log.d("PATIENT",patientList.get(0).toString());
         
     }
 
