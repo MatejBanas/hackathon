@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">medicalQR</string>
+    <string name="button1">INFO</string>
+    <string name="button2">LOG IN WITH QR</string>
 </resources>

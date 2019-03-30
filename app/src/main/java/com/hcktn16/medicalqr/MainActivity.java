@@ -1,6 +1,10 @@
 package com.hcktn16.medicalqr;
 
+<<<<<<< HEAD
 import android.arch.persistence.room.Room;
+=======
+import android.content.Context;
+>>>>>>> 861a6b6a5818d298bf197c85dd68aec0282872c5
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
