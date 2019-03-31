@@ -41,6 +41,8 @@
         </activity>
         <activity android:name=".InfoActivity" />
         <activity android:name=".LogInWithQRActivity" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".ListView" />
 
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"

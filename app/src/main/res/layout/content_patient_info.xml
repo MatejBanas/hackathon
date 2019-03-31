@@ -8,6 +8,8 @@
     tools:context=".PatientInfoActivity"
     tools:showIn="@layout/activity_patient_info">
 
+
+
     <android.support.v7.widget.CardView
         android:id="@+id/card_viewspOffer1"
         android:layout_width="match_parent"
@@ -22,54 +24,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="KOKOT PICA U HOLICA" />
-    </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_viewspOffer2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="0.5dp"
-        app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="PALKO" />
-    </android.support.v7.widget.CardView>
+            android:text="KOKOT PICA U HOLICA2" />
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_viewspOffer3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="0.5dp"
-        app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="PALKO MAROS MAZATEL" />
-    </android.support.v7.widget.CardView>
+            android:text="KOKOT PICA U HOLICA3" />
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_viewspOffer4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="0.5dp"
-        app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="PALKO PALKO" />
+            android:text="KOKOT PICA U HOLICA4" />
+
     </android.support.v7.widget.CardView>
 
 </android.support.v4.widget.NestedScrollView>

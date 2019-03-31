@@ -39,7 +39,7 @@ public class LogInWithQRActivity extends AppCompatActivity implements ZXingScann
     }
 
     private void patientInfoToMenu(){
-        Intent intent = new Intent(LogInWithQRActivity.this, PatientInfoActivity.class);
+        Intent intent = new Intent(LogInWithQRActivity.this, ListActivity.class);
         startActivity(intent);
     }
 
