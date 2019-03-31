@@ -71,6 +71,8 @@ public class DoctorActivity extends AppCompatActivity {
         TextView newAdress = (TextView) findViewById(R.id.textView5);
         newAdress.setText(adress);
 
+
+
     }
 
 
