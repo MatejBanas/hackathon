@@ -9,19 +9,20 @@ import com.google.zxing.Result;
 import com.hcktn16.medicalqr.db.DbHandler;
 import com.parse.ParseException;
 
+import java.util.HashMap;
 import java.util.List;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class LogInWithQRActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler{
     private ZXingScannerView zXingScannerView;
-    private List<String> examinations;
+    private List<HashMap> examinations;
 
-    public List<String> getExaminations() {
+    public List<HashMap> getExaminations() {
         return examinations;
     }
 
-    public void setExaminations(List<String> examinations) {
+    public void setExaminations(List<HashMap> examinations) {
         this.examinations = examinations;
     }
 
@@ -51,7 +52,7 @@ public class LogInWithQRActivity extends AppCompatActivity implements ZXingScann
 
         String id = result.getText();
         try {
-           List<String> exams =  DbHandler.readPatientId(id);
+           List<HashMap> exams =  DbHandler.readPatientId(id);
            setExaminations(exams);
         } catch (ParseException e) {
             e.printStackTrace();
