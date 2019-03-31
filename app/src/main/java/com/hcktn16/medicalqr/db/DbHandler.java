@@ -7,21 +7,21 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class DbHandler {
 
-    public static void readPatientId() throws ParseException {
-        // Create
-//        ParseObject patients = ParseObject.create("Patients");
-//        patients.put("first_name","Test");
-//        patients.put("last_name","testiiiing");
-//        patients.put("patientId","654-xxx");
-//        patients.saveInBackground();
+    public static List<HashMap> readPatientId(String id) throws ParseException {
+        List<HashMap> examinations = new ArrayList<>();
+        HashMap<String,String> ex = new HashMap<>();
 
         // Read
         ParseQuery<ParseObject> pQuery = ParseQuery.getQuery("Patients");
-        pQuery.whereEqualTo("patientId","123abc");
+        pQuery.whereEqualTo("patientId",id);
 
 
         ParseObject patient =  pQuery.getFirst();
@@ -29,23 +29,29 @@ public class DbHandler {
         String lastName = patient.getString("last_name");
 
         ParseQuery<ParseObject> eQuery = ParseQuery.getQuery("Events");
-        eQuery.whereEqualTo("patientId","123abc");
-        eQuery.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> list, ParseException e) {
+        eQuery.whereEqualTo("patientId",id);
 
-                if (e == null && list != null && list.size() != 0) {
-                    for (ParseObject event : list) {
+        List<ParseObject> examsList = eQuery.find();
 
-                        String finalStr = firstName + lastName + event.getString("examination") + event.getDate("date") +
-                                event.getString("doctor");
-                        Log.d("EXAM", finalStr);
-                    }
-                } else {
-                    assert e != null;
-                    e.printStackTrace();
-                }
-            }
-        });
+        for (ParseObject exam : examsList){
+            ParseQuery<ParseObject> docQuery = ParseQuery.getQuery("Doctors");
+            docQuery.whereEqualTo("doctorID",exam.get("doctorID"));
+            String docName = docQuery.getFirst().getString("name");
+            String docSurname = docQuery.getFirst().getString("surname");
+            docName = docName + " " +docSurname;
+//            String finalStr = firstName + lastName + exam.getString("examination") + exam.getDate("date") +
+//                    docName + exam.getString("department");
+         //   examinations.add(finalStr);
+            ex.put("Patient Name", firstName + " " + lastName);
+            ex.put("Examination", exam.getString("examination"));
+
+            Format formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+            String dateFormatted = formatter.format(exam.getDate("date"));
+            ex.put("Date", dateFormatted);
+            ex.put("Doctor",docName);
+            ex.put("Department",exam.getString("department"));
+            examinations.add(ex);
+        }
+        return examinations;
     }
 }
