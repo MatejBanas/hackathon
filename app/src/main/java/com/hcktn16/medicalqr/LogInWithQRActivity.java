@@ -1,9 +1,9 @@
 package com.hcktn16.medicalqr;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.zxing.Result;
 
@@ -35,5 +35,12 @@ public class LogInWithQRActivity extends AppCompatActivity implements ZXingScann
     public void handleResult(Result result) {
         //Toast.makeText(getApplicationContext(),result.getText(),Toast.LENGTH_SHORT).show();
         //zXingScannerView.resumeCameraPreview(this);
+        patientInfoToMenu();
     }
+
+    private void patientInfoToMenu(){
+        Intent intent = new Intent(LogInWithQRActivity.this, PatientInfoActivity.class);
+        startActivity(intent);
+    }
+
 }
