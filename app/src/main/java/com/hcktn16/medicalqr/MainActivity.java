@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.hcktn16.medicalqr.db.DbHandler;
 import com.parse.ParseException;
@@ -17,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonInfo = findViewById(R.id.buttonInfo);
-        Button buttonLogInWithQR = findViewById(R.id.buttonLogInWithQR);
+        ImageButton buttonInfo = findViewById(R.id.buttonInfo);
+        ImageButton buttonLogInWithQR = findViewById(R.id.buttonLogInWithQR);
 
         buttonInfo.setOnClickListener(new View.OnClickListener() {
             @Override

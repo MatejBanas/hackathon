@@ -16,9 +16,9 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class LogInWithQRActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler{
     private ZXingScannerView zXingScannerView;
-    private List<Examinaton> examinations;
+    private static List<Examinaton> examinations;
 
-    public List<Examinaton> getExaminations() {
+    public static List<Examinaton> getExaminations() {
         return examinations;
     }
 

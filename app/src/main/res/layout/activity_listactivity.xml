@@ -13,14 +13,18 @@
         android:background="@android:color/holo_orange_dark"
         android:text=""
         android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/colorPrimaryDark"/>
 
     <ListView
         android:id="@+id/simpleListView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:divider="@color/material_blue_grey_800"
-        android:dividerHeight="1dp" />
+        android:divider="@color/colorPrimaryDark"
+        android:dividerHeight="5dp" />
 </LinearLayout>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:gravity="center"
-    android:background="@color/white"
+    android:background="@color/colorPrimaryDark"
     android:padding="20dp"
     tools:context=".LogInWithQRActivity">
 
@@ -17,6 +17,7 @@
         android:background="@android:color/holo_orange_dark"
         android:onClick="scan"
         android:text="Scan"
+        android:textSize="50sp"
         android:textColor="@android:color/white" />
 
 

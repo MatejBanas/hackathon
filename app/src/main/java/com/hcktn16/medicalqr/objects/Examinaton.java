@@ -9,12 +9,23 @@ public class Examinaton {
     private String doctor;
     private String department;
 
-    public Examinaton(String patientName, String examination, Date date, String doctor, String department) {
+    public String getDoor() {
+        return door;
+    }
+
+    public void setDoor(String door) {
+        this.door = door;
+    }
+
+    private String door;
+
+    public Examinaton(String patientName, String examination, Date date, String doctor, String department, String door) {
         this.patientName = patientName;
         this.examination = examination;
         this.date = date;
         this.doctor = doctor;
         this.department = department;
+        this.door = door;
     }
 
     public String getPatientName() {
