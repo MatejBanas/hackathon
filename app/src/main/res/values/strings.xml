@@ -2,6 +2,10 @@
     <string name="app_name">medicalQR</string>
     <string name="button1">INFO</string>
     <string name="button2">LOG IN WITH QR</string>
+    <string name="title_activity_doctor">DoctorActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
     <string name="back4app_server_url">https://parseapi.back4app.com/</string>
     <!-- Change the following strings as required -->
     <string name="back4app_app_id">0Sdg43rNXkRNREFbnl5TCCVoeV51vUvQNDZ22TXb</string>

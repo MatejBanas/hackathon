@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, InfoActivity.class);
         startActivity(intent);
 
-        try {
+        /*try {
             DbHandler.readPatientId();
         } catch (ParseException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 }
