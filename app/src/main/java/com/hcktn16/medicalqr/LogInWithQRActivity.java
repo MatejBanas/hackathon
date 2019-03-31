@@ -46,6 +46,12 @@ public class LogInWithQRActivity extends AppCompatActivity implements ZXingScann
     }
 
     @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(LogInWithQRActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
     public void handleResult(Result result) {
         //Toast.makeText(getApplicationContext(),result.getText(),Toast.LENGTH_SHORT).show();
         //zXingScannerView.resumeCameraPreview(this);

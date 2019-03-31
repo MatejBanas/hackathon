@@ -5,7 +5,6 @@ import android.view.View;
 
 public class ListView extends AppCompatActivity {
     public void onClick(View v) {
-
     }
 
 

@@ -5,6 +5,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class DbHandler {
@@ -23,6 +24,7 @@ public class DbHandler {
 
         ParseQuery<ParseObject> eQuery = ParseQuery.getQuery("Events");
         eQuery.whereEqualTo("patientId",id);
+        eQuery.addAscendingOrder("date");
 
         List<ParseObject> examsList = eQuery.find();
 
