@@ -30,58 +30,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="73dp"
-        android:contentDescription="name of doctor"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Janko Hrasko"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Janko Hrasko" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="168dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Neuronolog. Amb."
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Neuronolog. Amb." />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="231dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Roosvelts 13"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Roosvelts 13" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="295dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Neuro. Dep., 2nd floor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"
@@ -92,14 +40,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mapa" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="306dp"
-        android:layout_marginTop="16dp"
-        android:text="<---"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="87dp"
+        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="28dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="19dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="21dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </android.support.constraint.ConstraintLayout>

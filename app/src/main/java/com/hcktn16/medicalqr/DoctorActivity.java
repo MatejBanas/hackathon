@@ -4,19 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
-import java.util.List;
 
 public class DoctorActivity extends AppCompatActivity {
 
@@ -51,14 +45,8 @@ public class DoctorActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        final EditText text1 = (EditText) findViewById(R.id.editText);
-        final EditText text2 = (EditText) findViewById(R.id.editText2);
-        final EditText text3 = (EditText) findViewById(R.id.editText3);
-        final EditText text4 = (EditText) findViewById(R.id.editText4);
-
         ParseQuery<ParseObject> dQuery = ParseQuery.getQuery("Doctors");
         dQuery.whereEqualTo("doctorID","1");
-
 
         ParseObject doctor = null;
         try {
@@ -71,26 +59,19 @@ public class DoctorActivity extends AppCompatActivity {
         String wardAndFloor = doctor.getString("ward") + ", " + doctor.getString("floor");
         String adress = doctor.getString("adress");
 
+        TextView newName = (TextView) findViewById(R.id.textView2);
+        newName.setText(name);
 
-        text4.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        TextView newAmbulance = (TextView) findViewById(R.id.textView3);
+        newAmbulance.setText(ambulance);
 
-            }
+        TextView newWardAndFloor = (TextView) findViewById(R.id.textView4);
+        newWardAndFloor.setText(wardAndFloor);
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+        TextView newAdress = (TextView) findViewById(R.id.textView5);
+        newAdress.setText(adress);
 
-            }
-
-            public void afterTextChanged(Editable s) {
-                text1.setText(name);
-                text2.setText(ambulance);
-                text3.setText(wardAndFloor);
-                text4.setText(adress);
-
-            }
-        });
     }
+
 
 }
