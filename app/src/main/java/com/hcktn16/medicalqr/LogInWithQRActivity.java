@@ -2,46 +2,38 @@ package com.hcktn16.medicalqr;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Toast;
 
-import com.camerakit.CameraKitView;
+import com.google.zxing.Result;
 
-public class LogInWithQRActivity extends AppCompatActivity {
-    private CameraKitView cameraKitView;
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
+
+public class LogInWithQRActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler{
+    private ZXingScannerView zXingScannerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginwithqr);
-        cameraKitView = findViewById(R.id.camera);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        cameraKitView.onStart();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        cameraKitView.onResume();
+    public void scan(View view){
+        zXingScannerView =new ZXingScannerView(getApplicationContext());
+        setContentView(zXingScannerView);
+        zXingScannerView.setResultHandler(this);
+        zXingScannerView.startCamera();
     }
 
     @Override
     protected void onPause() {
-        cameraKitView.onPause();
         super.onPause();
+        zXingScannerView.stopCamera();
     }
 
     @Override
-    protected void onStop() {
-        cameraKitView.onStop();
-        super.onStop();
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        cameraKitView.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    public void handleResult(Result result) {
+        //Toast.makeText(getApplicationContext(),result.getText(),Toast.LENGTH_SHORT).show();
+        //zXingScannerView.resumeCameraPreview(this);
     }
 }

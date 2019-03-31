@@ -31,13 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 logInWithQRFromMain();
             }
         });
-
-
-
-
     }
-
-
 
     private void logInWithQRFromMain(){
         Intent intent = new Intent(MainActivity.this, LogInWithQRActivity.class);
