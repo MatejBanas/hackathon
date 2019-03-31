@@ -1,4 +1,4 @@
-package com.hcktn16.medicalqr;
+package com.hcktn16.medicalqr.db;
 
 import android.app.Application;
 

@@ -8,7 +8,7 @@
     <uses-feature android:name="android.hardware.camera.autofocus"/>
 
     <application
-        android:name=".DbConnector"
+        android:name=".db.DbConnector"
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"

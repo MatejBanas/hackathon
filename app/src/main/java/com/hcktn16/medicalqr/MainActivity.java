@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.hcktn16.medicalqr.db.DbHandler;
 import com.parse.ParseException;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,24 +43,6 @@ public class MainActivity extends AppCompatActivity {
     private void infoFromMain(){
         Intent intent = new Intent(MainActivity.this, InfoActivity.class);
         startActivity(intent);
-
-        // Create DB
-//        PatientDatabase database = Room.databaseBuilder(this, PatientDatabase.class, "patient_db")
-//                .allowMainThreadQueries()
-//                .build();
-//
-//        // Insert to DB
-//        PatientDao patientDao= database.patientDao();
-//        Patient patient = new Patient();
-//        patient.setFirstName("Matej");
-//        patient.setLastName("Banas");
-//
-//        patientDao.insert(patient);
-//
-//        // Debug
-//        List<Patient> patientList = patientDao.getPatients();
-//
-//        Log.d("PATIENT",patientList.get(0).toString());
 
         try {
             DbHandler.readPatientId();
