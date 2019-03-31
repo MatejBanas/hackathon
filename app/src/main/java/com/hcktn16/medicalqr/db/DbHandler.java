@@ -45,7 +45,7 @@ public class DbHandler {
             ex.put("Patient Name", firstName + " " + lastName);
             ex.put("Examination", exam.getString("examination"));
 
-            Format formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+            Format formatter = new SimpleDateFormat("HH:mm");
             String dateFormatted = formatter.format(exam.getDate("date"));
             ex.put("Date", dateFormatted);
             ex.put("Doctor",docName);
